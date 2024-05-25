@@ -395,10 +395,10 @@ async def main():
                     screen.blit(label,(menu_button.x+10,menu_button.y+10))
 
                     # await asyncio.sleep(0)
-                    quit_button_rect = pygame.Rect(width // 2 - 150, height // 2 - 130, 300, 50)
-                    pygame.draw.rect(screen, RED, quit_button_rect)
-                    label = small_font.render("Quit", 1, WHITE)
-                    screen.blit(label, (quit_button_rect.x + 10, quit_button_rect.y + 10))
+                    # quit_button_rect = pygame.Rect(width // 2 - 150, height // 2 - 130, 300, 50)
+                    # pygame.draw.rect(screen, RED, quit_button_rect)
+                    # label = small_font.render("Quit", 1, WHITE)
+                    # screen.blit(label, (quit_button_rect.x + 10, quit_button_rect.y + 10))
 
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if play_again_button_rect.collidepoint(event.pos):
@@ -407,8 +407,8 @@ async def main():
                         elif menu_button.collidepoint(event.pos):
                             menu = True
 
-                        elif quit_button_rect.collidepoint(event.pos):
-                            sys.exit()
+                        # elif quit_button_rect.collidepoint(event.pos):
+                        #     sys.exit()
 
 
         # # Ask for Player 2 Input
@@ -420,9 +420,9 @@ async def main():
                     if level == "Beginner":
                         col, minimax_score = minimax(board, 2, -math.inf, math.inf, True)
                     elif level == "Intermediate":
-                        col, minimax_score = minimax(board, 6, -math.inf, math.inf, True)
+                        col, minimax_score = minimax(board, 4, -math.inf, math.inf, True)
                     elif level == "Expert":
-                        col, minimax_score = minimax(board, 8, -math.inf, math.inf, True)
+                        col, minimax_score = minimax(board, 6, -math.inf, math.inf, True)
                     end_time = time.time()
                     time = end_time - start_time
                     print(time)
