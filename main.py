@@ -11,6 +11,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 WHITE = (255,255,255)
+ORANGE = (255,165,0)
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
@@ -376,6 +377,11 @@ async def main():
                                 screen.blit(label, (40, 10))
                                 pygame.display.update()
                                 game_over = True
+                            elif len(get_valid_locations(board)) == 0:
+                                label = myfont.render("It's a Draw!", 1, ORANGE)
+                                screen.blit(label, (40, 10))
+                                pygame.display.update()
+                                game_over = True
 
                             turn += 1
                             turn = turn % 2
@@ -436,7 +442,11 @@ async def main():
                             screen.blit(label, (40, 10))
                             pygame.display.update()
                             game_over = True
-
+                        elif len(get_valid_locations(board)) == 0:
+                            label = myfont.render("It's a Draw!",1, ORANGE)
+                            screen.blit(label, (40, 10))
+                            pygame.display.update()
+                            game_over = True
                         # print_board(board)
 
                         turn += 1
