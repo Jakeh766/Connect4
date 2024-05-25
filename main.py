@@ -394,7 +394,7 @@ async def main():
                     label = small_font.render("Go Back to Menu",1,WHITE)
                     screen.blit(label,(menu_button.x+10,menu_button.y+10))
 
-                    await asyncio.sleep(0)
+                    # await asyncio.sleep(0)
                     quit_button_rect = pygame.Rect(width // 2 - 150, height // 2 - 130, 300, 50)
                     pygame.draw.rect(screen, RED, quit_button_rect)
                     label = small_font.render("Quit", 1, WHITE)
@@ -403,7 +403,7 @@ async def main():
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if play_again_button_rect.collidepoint(event.pos):
                             turn = start_turn
-                            reset_game()
+                            await reset_game()
                         elif menu_button.collidepoint(event.pos):
                             menu = True
 
