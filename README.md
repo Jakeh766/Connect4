@@ -23,11 +23,11 @@ There are four directions that a player can win in Connect 4: vertical, horizont
 
 The following GIF illustrates how the AI would evaluate this specific position for yellow.
 
-![Scoring](/assets/Connect4/Connect4Scoring.gif)
+![Scoring](/assets/Connect4Scoring.gif)
 
 The next GIF shows how the AI (yellow piece) would pick the optimal move after red starts the game by placing a piece in the center. 
 
-![Minimax](/assets/Connect4/Connect4GIF.gif)
+![Minimax](/assets/Connect4GIF.gif)
 
 In the GIF, the circled boards are pruned, meaning there is no point in evaluating them because alpha is greater than beta.
 
