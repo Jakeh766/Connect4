@@ -29,7 +29,7 @@ The next GIF shows how the AI (yellow piece) would pick the optimal move after r
 
 ![Minimax](/assets/Connect4GIF.gif)
 
-In the GIF, the circled boards are pruned, meaning there is no point in evaluating them because alpha is greater than beta.
+In the GIF, the circled boards are pruned, meaning there is no point in evaluating them because alpha is greater than beta. Alpha represents the best score that the maximizer (AI) can guarantee and beta represents the best score that the minimizer (the human player) can guarantee. Alpha-beta pruning optimizes the minimax algorithm by reducing the number of positions that need to be evaluated and thus speeding up decision-making.
 
 Inspiration for this project came from Keith Galli's Youtube series: [Keith Galli's Youtube Series](https://www.youtube.com/playlist?list=PLFCB5Dp81iNV_inzM-R9AKkZZlePCZdtV)
 
